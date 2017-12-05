@@ -1,0 +1,12 @@
+#include<stdio.h>//for printf,scanf
+#include<math.h>//for mathematical functions
+main()
+{
+	long a,b,c;//declaring three variable of long data type
+	printf("enter the number:");
+	scanf("%ld",&a);//taking the value
+	printf("enter power to be calculated:");
+	scanf("%ld",&b);//taking the value
+	c=pow(a,b);//function include in math.h 'a' is number and 'b' is power
+	printf("%ld",c);
+}
