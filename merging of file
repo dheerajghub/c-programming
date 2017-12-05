@@ -1,0 +1,52 @@
+#include<stdio.h>
+struct student
+{
+	char name[10];
+	int rollnum;
+	float cgpa;
+}s1;
+main()
+{
+	FILE *fp1,*fp2,*fp3;
+	fp1=fopen("file1.txt","a");
+	printf("enter the name of student: ");
+	scanf("%s",&s1.name);
+	printf("enter the rollnumber:");
+	scanf("%d",&s1.rollnum);
+	printf("enter the cgpa");
+	scanf("%f",&s1.cgpa);
+	fprintf(fp1,"\n%s,%d,%f\n",s1.name,s1.rollnum,s1.cgpa);
+	printf("data save:))))\n");
+	fclose(fp1);
+	// next file
+	fp2=fopen("file2.txt","a");
+	printf("enter the name of student: ");
+	scanf("%s",&s1.name);
+	printf("enter the rollnumber:");
+	scanf("%d",&s1.rollnum);
+	printf("enter the cgpa");
+	scanf("%f",&s1.cgpa);
+	fprintf(fp2,"\n%s,%d,%f\n",s1.name,s1.rollnum,s1.cgpa);
+	printf("data save:))))");
+	fclose(fp2);
+	fp1=fopen("file1.txt","r");
+	fp2=fopen("file2.txt","r");
+	while(fscanf(fp1,"%s,%d,%f",s1.name,s1.rollnum,s1.cgpa)!=EOF)
+	{
+		fp3=fopen("file3.txt","a");
+		fprintf(fp3,"%s,%d,%f",s1.name,s1.rollnum,s1.cgpa);
+		fclose(fp3);		
+	}
+	while(fscanf(fp2,"%s,%d,%f",s1.name,s1.rollnum,s1.cgpa)!=EOF)
+	{
+		fp3=fopen("file3.txt","a");
+		fprintf(fp3,"%s,%d,%f",s1.name,s1.rollnum,s1.cgpa);
+		fclose(fp3);		
+	}
+	printf("copy to file 3");
+	fclose(fp1);
+	fclose(fp2);
+	
+	
+	
+}
