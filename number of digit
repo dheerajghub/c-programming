@@ -1,0 +1,17 @@
+#include<stdio.h>
+main()
+{
+	long a,i;
+	int count=0;
+	printf("enter any digit: ");
+	scanf("%ld",&a);
+	i=a;
+	while(i!=0)
+	{
+		i=i/10;
+		count++;
+	}
+	printf("number of digit is/are: %d ",count);	
+	
+}
+
