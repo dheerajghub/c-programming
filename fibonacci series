@@ -1,0 +1,14 @@
+#include<stdio.h>
+main()
+{
+	int n ,first=0,second=1,next=0;
+	printf("enter the number of terms you want to print of fibonacci series:");
+	scanf("%d",&n);
+	for(int i=0;i<n;i++)
+	{
+		first=second;
+		second=next;
+		next=first+second;
+		printf("%d ",next);	
+	}
+}
