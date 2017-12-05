@@ -1,0 +1,2 @@
+# c-programming
+basic terminology
