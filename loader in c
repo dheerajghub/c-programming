@@ -1,0 +1,12 @@
+#include<stdio.h>
+#include<windows.h>//for sleep()-it delay execution and system(cls)-clear whole screen 
+main()
+{
+	int i;
+	for(i=0;i!=100;i++)
+	{
+		printf("\n\n\n\t\t\tLOADING PLEASE WAIT %d",i);
+		Sleep(20);
+		system("cls");
+	}
+}
